@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/today_read_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bar_height"
+            android:background="@color/actionbar_bg" >
+
+            <ImageButton
+                android:id="@+id/today_savebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/today_read_collect" />
+
+            <cn.huaxunchina.cloud.app.view.MyBackView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center" >
+            </cn.huaxunchina.cloud.app.view.MyBackView>
+        </RelativeLayout>
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/today_list"
+            style="@style/pull_to_refresh_listview"
+            android:layout_below="@id/today_read_title"
+            android:dividerHeight="2dp"
+            android:listSelector="@null"
+            android:scrollbars="none" >
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/action_bar_v2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <LinearLayout
+                    android:id="@+id/sms_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ed_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收件人:"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/bar_content_size" />
+
+                    <TextView
+                        android:id="@+id/sms_linkman_ed"
+                        android:layout_width="182dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dip"
+                        android:background="@null"
+                        android:singleLine="true"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/bar_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                     android:id="@+id/sms_addlnkman_layout"
+                    android:layout_alignBottom="@+id/sms_layout"
+                    android:layout_alignRight="@+id/sms_layout"
+                    android:layout_alignTop="@+id/sms_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="#fa5d5d"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/sms_addlnkman_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sms_add" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ed_bg"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/sms_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="right"
+                    android:text="0/210"
+                    android:textSize="@dimen/bar_content_size" />
+
+                <EditText
+                    android:id="@+id/sms_content_ed"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ed_bg"
+                    android:gravity="top"
+                    android:hint="编辑短信内容"
+                    android:imeOptions="actionDone"
+                    android:lineSpacingExtra="6.0dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/bar_content_size" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

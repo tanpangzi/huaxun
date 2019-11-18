@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/loc_timeRelative"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp" >
+
+        <EditText
+            android:id="@+id/loc_edname"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:focusable="true"
+            android:hint="昵称 "
+            android:maxLength="10"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bar_content_size" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/loc_edphone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/loc_edname"
+            android:background="@color/white"
+            android:focusable="true"
+            android:hint="手机号码"
+            android:inputType="number"
+            android:maxLength="13"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bar_content_size" >
+        </EditText>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/loc_activity_bg"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+ 
+            <FrameLayout
+            android:id="@+id/loc_layout_container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:layout_marginBottom="@dimen/loc_home_menu_marginbottom"
+            android:background="#ffffffff" />
+        <!-- 菜单 -->
+     
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            layout="@layout/loc_home_menu_layout" />
+    </FrameLayout>
+
+</LinearLayout>

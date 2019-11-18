@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.huaxunchina.cloud.app">
+
+    <!-- MID5 : 57fbb2ed09e143ab78b778a133ff9d1d -->
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 访问网络连接，可能产生GPRS流量 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许振动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 允许程序写入外部存储，如SD卡上写文件 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 通过WiFi或移动基站的方式获取用户错略的经纬度信息，定位精度大概误差在30~1500米 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 通过GPS芯片接收卫星的定位信息，定位精度达10米以内 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 允许程序访问额外的定位提供者指令 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 挂载、反挂载外部文件系统 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许访问摄像头进行拍照 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 允许访问闪光灯 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 允许应用访问联系人通讯录信息 -->
+    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" /> -->
+    <!-- 允许程序从非系统拨号器里输入电话号码 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 结束任务通过restartPackage(String)方法，该方式将在外来放弃 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 允许程序管理AccountManager中的账户列表 -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!-- 访问GMail账户列表 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- 全局window dialog -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- 个推系统权限 -->
+    <!-- 访问电话状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获取网络信息状态，如当前的网络连接是否有效 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 改变WiFi状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 获取当前WiFi接入的状态以及WLAN热点的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许程序开机自动运行 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="getui.permission.GetuiService" />
+    <!-- 允许程序获取当前或最近运行的应用 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 改变网络状态如是否能联网 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 短信发送权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!-- 自定义权限 -->
+    <permission
+        android:name="getui.permission.GetuiService"
+        android:protectionLevel="normal" >
+    </permission>
+
+    <!-- 百度地图sdk权限 -->
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" >
+    </uses-permission>
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"></uses-permission> -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <application
+        android:name="cn.huaxunchina.cloud.app.application.ApplicationController"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+
+        <!-- android:launchMode="singleTask" -->
+
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.Loading"
+             android:screenOrientation="portrait" 
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+        </activity>
+
+        <!-- 地图SDK -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="K5QVIORWndFLZFadsgQU8dDq" />
+        <!-- 定位service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <!-- 修改改的 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="Ja41LWusBI6RMu8NCSYFy1" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="EqDeeeMn5E8AvzTdWcToB" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="MrJgrZIsh88ov2FidHMTi9" />
+        <meta-data
+            android:name="PUSH_GROUPID"
+            android:value="" />
+        <!-- 配置第三方Receiver通知 -->
+        <receiver
+            android:name="cn.huaxunchina.cloud.app.getui.GetuiReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- appid 第三方的appId mXJ2vrYIvH6P85qjP0B0MA -->
+                <!-- 修改改的 -->
+                <action android:name="com.igexin.sdk.action.Ja41LWusBI6RMu8NCSYFy1" />
+            </intent-filter>
+        </receiver>
+
+        <!-- -个推///////////////////////////////// -->
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice" >
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+            </intent-filter>
+        </receiver>
+<!--        <receiver
+            android:name="com.igexin.sdk.PushReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.pushmanager" />
+            </intent-filter>
+        </receiver>-->
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver android:name="com.igexin.download.DownloadReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="cn.huaxunchina.cloud.app"
+            android:process=":pushservice" />
+        <!-- android:authorities="downloads.第三方包名" -->
+
+        <activity
+            android:name="com.igexin.getuiext.activity.GetuiExtActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="android.task.myServicetask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <receiver
+            android:name="com.igexin.getuiext.service.PayloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- 这个com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4固定，不能修改 -->
+                <action android:name="com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4" />
+                <!-- android:name="com.igexin.sdk.action.第三方的appId" -->
+                <!-- 修改改的 -->
+                <action android:name="com.igexin.sdk.action.Ja41LWusBI6RMu8NCSYFy1" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.igexin.getuiext.service.GetuiExtService"
+            android:process=":pushservice" />
+        <!-- 个推SDK配置结束 -->
+
+
+        <!-- 自己定义的一个服务 -->
+        <service android:name="cn.huaxunchina.cloud.app.getui.PlusService" >
+        </service>
+        <!-- 自定义网络的监控广播 -->
+        <!--
+        <receiver android:name="cn.huaxunchina.cloud.app.network.TANetworkStateReceiver" >
+            <intent-filter>
+                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.gzcpc.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <service
+            android:name="cn.huaxunchina.cloud.app.getui.view.UiService"
+            android:enabled="true" />
+        <service
+            android:name="cn.huaxunchina.cloud.app.upgrade.VersionService"
+            android:enabled="true" />
+
+        <!-- -///////////////////////////////// -->
+
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.GuideActivity"
+             android:screenOrientation="portrait" 
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.profile.Login"
+            android:label="@string/app_name"
+             android:screenOrientation="portrait" 
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.contacts.SmsContacts"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.contacts.SmsContent"
+            android:configChanges="keyboard|keyboardHidden|orientation|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+             android:windowSoftInputMode="stateAlwaysVisible|adjustResize" >
+        </activity>
+        
+        <!-- 群发短信界面 -->
+          <activity
+            android:name="cn.huaxunchina.cloud.app.activity.contacts.GroupSelectActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+        
+          <!-- 历史短信界面 -->
+          <activity
+            android:name="cn.huaxunchina.cloud.app.activity.contacts.HaveMessageView"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+        
+           <!-- 历史短信详情界面-->
+          <activity
+            android:name="cn.huaxunchina.cloud.app.activity.contacts.HosMessageDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+             >
+              <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+             -->
+            </activity>
+
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.Home"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+         <activity
+            android:name="cn.huaxunchina.cloud.app.activity.attendance.AttTime"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.profile.ChangeRole"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 成绩管理列表数据 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.score.ScoreList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 考试详情 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.score.ScoreDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 班级学生考试详情 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.score.ClassStudentScoreDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 班级-学生考试详情 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.score.StudentScoreDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 学生考试曲线图 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.score.ScoreGraph"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 考勤管理列表数据 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.attendance.AttendanceList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 分享至第三方平台授权操作类 -->
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 每日一读 -->
+
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.todayread.TodayRead"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 每日一读详情 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.todayread.TodayReadDetail"
+            android:label="@string/app_name"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.todayread.TodayReadDetail1"
+            android:label="@string/app_name"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" />
+        <!-- 我的收藏列表 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.todayread.MyCollect"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <!-- 通知公告列表 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.profile.ForgetPassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.profile.ResettingPassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.profile.UserInfo"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.profile.Setting"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.profile.About"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.profile.ModifyPassword"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.profile.Feedback"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <!-- 通知公告界面 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.notice.Notice"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 通知公告详情 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.notice.NoticeDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="false"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.notice.SumbitNotice"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 家庭作业列表 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.homework.HomeWork"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 发布家庭作业 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.homework.SumbitHomeWrok"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" >
+        </activity>
+
+        <!-- 家庭作业详情 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.homework.HomeWrokDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 家校互动列表 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.interaction.HomeSchoolActivities"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 家校互动详情界面 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.interaction.InteractionDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 家校互动提问界面 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.interaction.InteractionQuestions"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 请假管理列表界面 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.leave.LeaveManage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 请假申请界面 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.leave.SumbitLeave"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 请假管理详情界面 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.leave.LeaveDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.leave.LeaveDetail1"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            
+            
+        </activity>
+
+        <!-- 定位服务 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.app.activity.location.LocationService"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 定位服务 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.loc.Location"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 消息列表界面 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.msg.LocationMessage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.LocHome"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+
+        <!-- LocusActivity -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.LocusActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+          <!--  <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.LocusActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+              -->
+        <!-- 消息列表详情 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.msg.LocMessageDetail"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.msg.LocMessageDetail1"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 设置-帮助界面 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.LocHelp"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 设置-闹钟设置 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.AlarmSet"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 设置-设置闹钟详情界面 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.SetAlarmActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 设置-轨迹上报 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.PathReportedActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 设置-特殊提醒设置 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.SpeRemindSetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+
+        <!-- 设置-白名单 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.WhiteListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"  >
+        </activity>
+
+        <!-- 设置-亲情号 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.FamilyActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <!-- 设置-隐身设置 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.HidingSetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- 电子围栏地图 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.crawl.FencingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.crawl.PoiActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- 时段选择 -->
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.TimeStepSelect"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- 电池量显示类 -->
+
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.MyBatteryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <!-- 添加电子围栏信息 -->
+
+        <activity
+            android:name="cn.huaxunchina.cloud.location.app.activity.stt.crawl.AddElectronicFence"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+    </application>
+
+</manifest>

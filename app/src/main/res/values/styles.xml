@@ -1,0 +1,117 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- Application theme. -->
+
+    <style name="all_match_parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 弹出框动画 由下至上 -->
+    <style name="animation_dialogstyle" parent="@android:style/Animation.Dialog">
+        <item name="@android:windowEnterAnimation">@anim/dialog_in</item>
+        <!-- 进入时的动画 -->
+        <item name="@android:windowExitAnimation">@anim/dialog_out</item>
+        <!-- 退出时的动画 -->
+    </style>
+
+    <!-- 弹出框动画 由下至上 -->
+    <style name="animation_morestyle" parent="@android:style/Animation.Dialog">
+        <item name="@android:windowEnterAnimation">@anim/more_in</item>
+        <!-- 进入时的动画 -->
+        <item name="@android:windowExitAnimation">@anim/more_out</item>
+    </style>
+
+    <!-- 对话框样式 -->
+    <style name="dialog" parent="android:style/Theme.Dialog">
+
+        <!-- <item name="android:windowBackground">@null</item> -->
+        <item name="android:windowBackground">@color/md__transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- 屏幕背景变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+     <style name="loc_dialog" parent="android:style/Theme.Dialog">
+
+        <!-- <item name="android:windowBackground">@null</item> -->
+        <item name="android:windowBackground">@color/md__transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 屏幕背景变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    
+      
+    <!-- 弹出框动画 由下至上 -->
+    <style name="animationdialogstyle" parent="@android:style/Animation.Dialog">
+        <item name="@android:windowEnterAnimation">@anim/dialog_in</item>
+        <!-- 进入时的动画 -->
+        <item name="@android:windowExitAnimation">@anim/dialog_out</item>
+        <!-- 退出时的动画 -->
+    </style>
+
+    <style name="MyWidget" parent="@android:style/Theme" />
+
+    <style name="MyWidget.TabText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/tab_indicator_text</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+    </style>
+
+    <!-- Common list view styles -->
+    <style name="MyWidget.ListView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:cacheColorHint">#00ffffff</item>
+        <item name="android:dividerHeight">2px</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:fadeScrollbars">true</item>
+    </style>
+
+    <style name="PopupAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="PopupAnimationFade" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <!-- 加载刷新列表 -->
+    <style name="pull_to_refresh_listview" parent="all_match_parent">
+        <item name="android:cacheColorHint">@color/md__transparent</item>
+        <item name="android:divider">@color/activity_bg</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:dividerHeight">2dp</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layoutAnimation">@anim/layout_bottom_to_top_slide</item>
+    </style>
+
+    <style name="transparentFrameWindowStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/photo_choose_bg</item>
+    </style>
+
+    <style name="main_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
+    </style>
+
+</resources>

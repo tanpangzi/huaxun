@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/action_bar" />
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/score_graph_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@color/bartabs_bg" >
+    </com.astuetz.PagerSlidingTabStrip>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/score_graph_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

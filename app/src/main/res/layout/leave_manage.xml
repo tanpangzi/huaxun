@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg" >
+
+    <RelativeLayout
+        android:id="@+id/leave_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg" >
+
+        <LinearLayout
+            android:layout_width="@dimen/actionbar_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/back"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/edit_leave_imagebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_btn"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <cn.huaxunchina.cloud.app.view.MyBackView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+        </cn.huaxunchina.cloud.app.view.MyBackView>
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/leave_list"
+        style="@style/pull_to_refresh_listview"
+        android:layout_below="@id/leave_title"
+        android:listSelector="@null" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</RelativeLayout>

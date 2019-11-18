@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/loc_activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/loc_action_bar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/locaticon_mapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <cn.huaxunchina.cloud.location.app.view.ZoomControlView
+                android:id="@+id/locaticon_zoomview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/loc_me_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/loc_me_seletor" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/loc_marker_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/loc_new_seletor" />
+    </RelativeLayout>
+
+</LinearLayout>

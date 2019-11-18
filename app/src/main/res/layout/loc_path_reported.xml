@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/actionbar_bg" >
+
+        <TextView
+            android:id="@+id/loc_path_report_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="确定"
+            android:textColor="@color/loc_save_txt_selector"
+            android:textSize="@dimen/bar_txt_size" />
+
+        <cn.huaxunchina.cloud.app.view.MyBackView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+        </cn.huaxunchina.cloud.app.view.MyBackView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="轨迹上报开关 "
+            android:textColor="@color/black"
+            android:textSize="@dimen/bar_content_size" />
+
+        <CheckBox
+            android:id="@+id/path_report_ck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_check"
+            android:button="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/path_relative"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/item_arrow" />
+
+        <TextView
+            android:id="@+id/loc_reported_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textView1"
+            android:text="请选择"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/bar_content_size" />
+
+        <TextView
+            android:id="@+id/loc_title_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="定时上报间隔 "
+            android:textColor="@color/black"
+            android:textSize="@dimen/bar_content_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/alarm_relative"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="上报时长 "
+            android:textColor="@color/black"
+            android:textSize="@dimen/bar_content_size" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="小时 "
+            android:textColor="@color/grey"
+            android:textSize="@dimen/bar_content_size" />
+
+        <EditText
+            android:id="@+id/loc_report_ed"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textView3"
+            android:background="@color/white"
+            android:gravity="right"
+            android:paddingRight="4dp"
+            android:maxLength="4"
+            android:layout_marginRight="3dp"
+            android:hint="0.5"
+            android:numeric="decimal"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/bar_content_size" >
+        </EditText>
+    </RelativeLayout>
+
+</LinearLayout>

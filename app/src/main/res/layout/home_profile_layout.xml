@@ -1,0 +1,191 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/home_bar_layout" />
+
+    <com.bounce.scrollview.BounceScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/pro_userinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/userinfo_tab_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <cn.huaxunchina.cloud.app.view.CircularImage
+                    android:id="@+id/pro_head"
+                    android:layout_width="70dip"
+                    android:layout_height="70dip"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/pro_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text=""
+                    android:textColor="@color/list_title_color"
+                    android:textSize="@dimen/bar_title_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/pro_msg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/userinfo_layout_heigth"
+                    android:layout_marginTop="1dip"
+                    android:background="@drawable/layout_selector_bg"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:text="@string/pro_msg_setting"
+                        android:textColor="@color/list_title_color"
+                        android:textSize="@dimen/bar_title_size" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/item_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pro_feedback"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/userinfo_layout_heigth"
+                    android:layout_marginTop="1dip"
+                    android:background="@drawable/layout_selector_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:text="@string/pro_feedback"
+                        android:textColor="@color/list_title_color"
+                        android:textSize="@dimen/bar_title_size" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/item_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pro_upgrade"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/userinfo_layout_heigth"
+                    android:layout_marginTop="1dip"
+                    android:background="@drawable/layout_selector_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:text="@string/pro_upgrade"
+                        android:textColor="@color/list_title_color"
+                        android:textSize="@dimen/bar_title_size" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/pro_upgrade_arrow"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/item_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pro_about"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/userinfo_layout_heigth"
+                    android:layout_marginTop="1dip"
+                    android:background="@drawable/layout_selector_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:text="@string/pro_about"
+                        android:textColor="@color/list_title_color"
+                        android:textSize="@dimen/bar_title_size" />
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/item_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/pro_logoff"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_selector"
+                android:text="@string/pro_logoff"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/bar_title_size" />
+        </LinearLayout>
+    </com.bounce.scrollview.BounceScrollView>
+
+</LinearLayout>

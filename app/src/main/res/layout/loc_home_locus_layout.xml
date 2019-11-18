@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/loc_action_bar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/locus_mapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/locus_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loc_about_seletor" />
+
+            <cn.huaxunchina.cloud.location.app.view.ZoomControlView
+                android:id="@+id/locus_zoomview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/locus_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/loc__prbar_bg"
+                android:focusable="false"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal" >
+
+                <ProgressBar
+                    android:id="@+id/loc_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="10dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:max="100"
+                    android:progressDrawable="@drawable/loc_progress_bar" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/locus_playbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/loc_play" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

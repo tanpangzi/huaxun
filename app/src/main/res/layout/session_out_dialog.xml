@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280.0dip"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_body"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5.0dip"
+        android:text="提示"
+        android:textColor="@color/lan_liang"
+        android:textSize="20.0sp" />
+
+    <View
+        android:id="@+id/title_sep"
+        android:layout_width="fill_parent"
+        android:layout_height="2.0sp"
+        android:layout_below="@id/title"
+        android:background="@color/lan_liang" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="10.0dip"
+        android:lineSpacingMultiplier="1.2"
+        android:text="会话已超时,请重新登陆"
+        android:textColor="@color/black"
+        android:textSize="18.0sp" />
+
+    <View
+        android:id="@+id/content_sep"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0sp"
+        android:layout_below="@id/content"
+        android:background="@drawable/divider" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_sep" >
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:layout_weight="1.0"
+            android:adjustViewBounds="true"
+            android:background="@drawable/dialog_button_selector"
+            android:text="重新登陆"
+            android:textColor="@color/dimgray"
+            android:textSize="16.0sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

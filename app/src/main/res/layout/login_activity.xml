@@ -1,0 +1,179 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/cn.huaxunchina.cloud.app"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="20dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="60dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_name" />
+        </LinearLayout>
+
+        <!--
+            <EditText
+            android:id="@+id/login_account_ed"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/login_ed"
+            android:drawableLeft="@drawable/login_usename_icon"
+            android:drawablePadding="5dp"
+            android:hint="账号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:textColorHint="@color/grey"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textCursorDrawable="@null"
+            android:textSize="17sp" />
+        -->
+
+        <cn.huaxunchina.cloud.app.view.MyLoginEdText
+            android:id="@+id/login_account_ed"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/login_ed"
+            android:drawableLeft="@drawable/login_usename_icon"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/icon_delete"
+            android:hint="账号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="17sp" />
+
+        <cn.huaxunchina.cloud.app.view.MyLoginEdText
+            android:id="@+id/login_password_ed"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/login_ed"
+            android:drawableLeft="@drawable/login_pass_icon"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/icon_delete"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:maxLength="11"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="17sp" />
+
+        <!--
+              <EditText
+            android:id="@+id/login_password_ed"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/login_ed"
+            android:drawableLeft="@drawable/login_pass_icon"
+            android:drawablePadding="5dp"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textColorHint="@color/grey"
+            android:textCursorDrawable="@null"
+            android:textSize="17sp" />
+        -->
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_btn"
+            android:gravity="center"
+            android:text="@string/login_btn"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:layout_weight="1" />
+
+        <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/login_forget_password_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="忘记密码"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+        -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/login_server_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择地区"
+                android:textColor="@color/login_txt_bg" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/login_forget_password_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="忘记密码"
+                android:textColor="@color/login_txt_bg" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

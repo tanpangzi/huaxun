@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/today_read_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg" >
+
+        <TextView
+            android:id="@+id/sumbit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/sumbit"
+            android:textColor="@color/sumbit_txt"
+            android:textSize="@dimen/bar_title_size" />
+
+        <cn.huaxunchina.cloud.app.view.MyBackView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+        </cn.huaxunchina.cloud.app.view.MyBackView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sumbit_notice_realtive"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#f8f8f8" >
+
+        <TextView
+            android:id="@+id/sumbit_object"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="请选择发布对象"
+            android:textColor="@color/list_title_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/jt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/enter1"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <cn.huaxunchina.cloud.app.view.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/sumbit_notice_realtive"
+        android:layout_below="@id/today_read_title"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp" >
+
+                <EditText
+                    android:id="@+id/notice_edit_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/forum_edittext_selector"
+                    android:hint="请输入通知主题(限20字)"
+                    android:maxLength="20"
+                    android:padding="10dp"
+                    android:textColorHint="@color/grey"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignLeft="@+id/relativeLayout3"
+                android:layout_below="@+id/relativeLayout3"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/notice_edit_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/forum_edittext_selector"
+                    android:gravity="top"
+                    android:hint="请输入通知内容(限150字)"
+                    android:maxLength="150"
+                    android:padding="10dp"
+                    android:textColorHint="@color/grey"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/notice_edit_content"
+                    android:layout_alignLeft="@id/notice_edit_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:background="@color/actionbar_bg"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/imageView2"
+                        android:layout_marginTop="5dp"
+                        android:text="添加图片"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/notice_photo" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/ed_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/relative_image"
+                    android:layout_alignRight="@id/notice_edit_content"
+                    android:layout_marginRight="7dp"
+                    android:text="0/150"
+                    android:textColor="@color/userinfo_txt_bg"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/image_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/relativeLayout5"
+                android:layout_below="@+id/relativeLayout5"
+                android:background="@drawable/avatar_background"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </cn.huaxunchina.cloud.app.view.BounceScrollView>
+
+</RelativeLayout>

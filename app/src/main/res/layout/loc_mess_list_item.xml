@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" >
+
+        <TextView
+            android:id="@+id/loc_title_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="2014-12-15 16:02:50"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bar_content_size" />
+
+        <TextView
+            android:id="@+id/loc_title_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/loc_title_time"
+            android:layout_alignBottom="@+id/loc_title_time"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/loc_title_time"
+            android:text="出电子围栏提醒"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bar_content_size" />
+
+        <TextView
+            android:id="@+id/loc_mess_conent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/loc_title_time"
+            android:layout_below="@+id/loc_title_time"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/jt"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:maxLines="2"
+            android:paddingTop="5dp"
+            android:text="广东省深圳市宝安区西乡臣田工业区宝田一路37栋华讯方舟移动宽带产业园"
+            android:textColor="#8e8e93"
+            android:textSize="@dimen/bar_data_size" />
+
+        <TextView
+            android:id="@+id/jt"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/loc_title_notice"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/item_arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

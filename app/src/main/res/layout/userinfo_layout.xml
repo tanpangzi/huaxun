@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/action_bar" />
+
+    <com.bounce.scrollview.BounceScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="20dip"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/userinfo_up_pwd_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/userinfo_layout_heigth"
+                android:background="@drawable/layout_selector_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="10dip" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:text="修改密码"
+                        android:textColor="@color/userinfo_txt_bg"
+                        android:textSize="@dimen/userinfo_txt_size" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/item_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/userinfo_layout_heigth"
+                    android:background="@color/layout_item_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:text="角色:"
+                        android:textColor="@color/userinfo_txt_bg"
+                        android:textSize="@dimen/userinfo_txt_size" />
+
+                    <TextView
+                        android:id="@+id/userinfo_role_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:textColor="@color/userinfo_txt_bg"
+                        android:textSize="@dimen/userinfo_txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/userinfo_layout_heigth"
+                    android:layout_marginTop="1dip"
+                    android:background="@color/layout_item_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:text="姓名:"
+                        android:textColor="@color/userinfo_txt_bg"
+                        android:textSize="@dimen/userinfo_txt_size" />
+
+                    <TextView
+                        android:id="@+id/userinfo_username_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:textColor="@color/userinfo_txt_bg"
+                        android:textSize="@dimen/userinfo_txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/userinfo_layout_heigth"
+                    android:layout_marginTop="1dip"
+                    android:background="@color/layout_item_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dip" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:text="学校:"
+                        android:textColor="@color/userinfo_txt_bg"
+                        android:textSize="@dimen/userinfo_txt_size" />
+
+                    <TextView
+                        android:id="@+id/userinfo_school_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:textColor="@color/userinfo_txt_bg"
+                        android:textSize="@dimen/userinfo_txt_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.bounce.scrollview.BounceScrollView>
+
+</LinearLayout>

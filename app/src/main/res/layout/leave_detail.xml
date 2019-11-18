@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg" >
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg" >
+
+        <cn.huaxunchina.cloud.app.view.MyBackView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+        </cn.huaxunchina.cloud.app.view.MyBackView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tab_bg_color"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/yesbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="23dp"
+            android:text="同意"
+            android:textColor="#05abff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/backbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="23dp"
+            android:text="退回"
+            android:textColor="@color/leave_type_color3"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <cn.huaxunchina.cloud.app.view.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/re_bottom"
+        android:layout_below="@id/head"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/leave_type"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center|left"
+                    android:text="事假"
+                    android:textColor="@color/list_title_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/leave_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/leave_type"
+                    android:gravity="center|right"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="@color/list_title_color"
+                    android:textSize="@dimen/bar_content_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/relativeLayout1"
+                android:layout_alignRight="@+id/relativeLayout1"
+                android:layout_below="@+id/relativeLayout1"
+                android:layout_marginTop="4dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center|left"
+                    android:text="开始时间"
+                    android:textColor="@color/list_title_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/sta_leave_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView3"
+                    android:gravity="center|right"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="@color/leave_type_color"
+                    android:textSize="@dimen/bar_data_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_marginTop="4dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center|left"
+                    android:text="结束时间"
+                    android:textColor="@color/list_title_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/end_leave_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView3"
+                    android:gravity="center|right"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="@color/leave_type_color"
+                    android:textSize="@dimen/bar_data_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignLeft="@+id/relativeLayout6"
+                android:layout_alignRight="@+id/relativeLayout6"
+                android:layout_below="@+id/relativeLayout6"
+                android:layout_marginTop="4dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/leave_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text=""
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/relativeLayout3"
+                android:layout_alignRight="@+id/relativeLayout1"
+                android:layout_below="@+id/relativeLayout3"
+                android:layout_marginTop="4dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center|left"
+                    android:text="状态"
+                    android:textColor="@color/list_title_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/leave_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView3"
+                    android:gravity="center|right"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="@color/list_title_color"
+                    android:textSize="@dimen/bar_content_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/relativeLayout4"
+                android:layout_alignRight="@+id/relativeLayout4"
+                android:layout_below="@+id/relativeLayout4"
+                android:layout_marginTop="4dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center|left"
+                    android:text="提交时间"
+                    android:textColor="@color/list_title_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/leave_sumbit_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView3"
+                    android:gravity="center|right"
+                    android:paddingRight="10dp"
+                    android:text=""
+                    android:textColor="@color/leave_type_color"
+                    android:textSize="@dimen/bar_data_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </cn.huaxunchina.cloud.app.view.BounceScrollView>
+
+</RelativeLayout>

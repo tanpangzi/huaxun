@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="30dip"
+        android:layout_marginTop="5dip"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/letter_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/catalog"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:text="A"
+                android:textColor="#444444" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#c8c7cc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/contacts_item_bg"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/contacts_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/contacts_head1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="6dip" >
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/list_title_color"
+                        android:textSize="@dimen/bar_title_size" />
+
+                    <TextView
+                        android:id="@+id/contacts_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/bar_content_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp" >
+
+                <TextView
+                    android:id="@+id/contacts_call"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/contacts_call" />
+
+                <TextView
+                    android:id="@+id/contacts_sms"
+                    android:layout_width="22dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="20dip"
+                    android:background="@drawable/contacts_sms" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dip"
+            android:background="#dadadb" />
+    </LinearLayout>
+
+</LinearLayout>

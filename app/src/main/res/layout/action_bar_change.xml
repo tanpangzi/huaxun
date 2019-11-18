@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bar_height"
+    android:background="@color/actionbar_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/contacts_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/actionbar_title_margin_left"
+        android:gravity="center"
+        android:text="联系人"
+        android:textColor="@color/actionbar_title_color"
+        android:textSize="@dimen/bar_txt_size" />
+
+    <ImageButton
+        android:id="@+id/sms_btn"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/group_send_btn" />
+
+    <ImageButton
+        android:id="@+id/hosmes_btn"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_alignTop="@+id/sms_btn"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/sms_btn"
+        android:background="@drawable/hos_message_btn" />
+
+</RelativeLayout>

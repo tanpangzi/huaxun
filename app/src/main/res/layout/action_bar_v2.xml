@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bar_height"
+    android:background="@color/actionbar_bg"
+    android:gravity="center" >
+
+    <cn.huaxunchina.cloud.app.view.MyBackView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:gravity="center" >
+    </cn.huaxunchina.cloud.app.view.MyBackView>
+
+    <TextView
+        android:id="@+id/submit_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/sumbit_txt"
+        android:textSize="@dimen/bar_title_size" />
+
+</RelativeLayout>

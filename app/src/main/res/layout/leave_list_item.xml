@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp" >
+
+        <TextView
+            android:id="@+id/leave_state_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/leave_sumbit_time"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/leave_type_color2"
+            android:textSize="@dimen/bar_content_size" />
+
+        <TextView
+            android:id="@+id/leave_sumbit_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/leave_type"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/bar_data_size" />
+
+        <TextView
+            android:id="@+id/leave_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/list_title_color"
+            android:textSize="@dimen/bar_title_size" />
+
+        <TextView
+            android:id="@+id/leave_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/leave_name"
+            android:layout_below="@+id/leave_sumbit_time"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/bar_content_size" />
+
+        <TextView
+            android:id="@+id/leave_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/leave_name"
+            android:layout_alignBottom="@+id/leave_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/leave_name"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="@dimen/bar_title_size" />
+    </RelativeLayout>
+
+</LinearLayout>

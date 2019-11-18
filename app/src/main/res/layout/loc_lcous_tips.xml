@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dip"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="230dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/loc_tips"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/location_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="地址:"
+                android:textColor="@color/loc_tips_text"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/location_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="时间:"
+                android:textColor="@color/loc_tips_text"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/location_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="定位类型:"
+                android:textColor="@color/loc_tips_text"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

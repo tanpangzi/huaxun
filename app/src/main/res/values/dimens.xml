@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="bar_height">45dp</dimen>
+    <dimen name="home_menu_height">54dip</dimen>
+    <dimen name="home_menu_marginbottom">52.0dip</dimen>
+    <dimen name="home_navigation_icon_padding">0.0dip</dimen>
+    
+    <dimen name="actionbar_width">40dip</dimen>
+    <dimen name="actionbar_title_margin_left">5dip</dimen>
+    
+    <dimen name="common_text_size_middle_2">14dp</dimen>
+    <dimen name="page_margin_width">12dp</dimen>
+    
+    <dimen name="userinfo_layout_heigth">48dip</dimen>
+    <dimen name="userinfo_txt_size">18dip</dimen>
+    
+    <dimen name="bar_txt_size">20sp</dimen>
+    <dimen name="bar_title_size">18sp</dimen>
+    <dimen name="bar_content_size">16sp</dimen>
+    <dimen name="bar_data_size">14sp</dimen>
+
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="scoreview_width_bottom_padding">50dp</dimen>
+    <dimen name="scoreview_height_bottom_padding">100dp</dimen>
+    <dimen name="scoreview_padding">6dp</dimen>
+    
+    
+    
+    <dimen name="loc_home_navigation_icon_padding">4dip</dimen>
+     <dimen name="loc_home_menu_height">44dip</dimen>
+     <dimen name="loc_home_menu_marginbottom">44dip</dimen>
+     
+     <dimen name="dialog_text_size">13sp</dimen>
+    <dimen name="sidebar_txt_size">16sp</dimen>
+    
+</resources>

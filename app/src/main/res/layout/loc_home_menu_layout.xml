@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loc_tabs_navigate_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <!-- location -->
+
+    <RelativeLayout
+        android:id="@+id/loc_home_location"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/loc_home_menu_height"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/bg"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/lco_home_location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/loc_home_navigation_location"
+            android:gravity="center"
+            android:text="@string/loc_home_location"
+            android:textColor="@color/home_navigation_white"
+            android:textSize="@dimen/bar_content_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/lco_home_location_tv"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/lco_home_location_tv"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#cccccc" />
+    </RelativeLayout>
+
+    <!-- locus -->
+
+    <RelativeLayout
+        android:id="@+id/loc_home_locus"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/loc_home_menu_height"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/bg"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/loc_home_locus_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/loc_home_navigation_locus"
+            android:drawablePadding="@dimen/loc_home_navigation_icon_padding"
+            android:gravity="center"
+            android:text="@string/loc_home_locus"
+            android:textColor="@color/home_navigation_white"
+            android:textSize="@dimen/bar_content_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/loc_home_locus_tv"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/loc_home_locus_tv"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#cccccc" />
+    </RelativeLayout>
+
+    <!-- msg -->
+
+    <RelativeLayout
+        android:id="@+id/loc_home_msg"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/loc_home_menu_height"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/bg"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/loc_home_msg_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/loc_home_navigation_msg"
+            android:drawablePadding="@dimen/loc_home_navigation_icon_padding"
+            android:gravity="center"
+            android:text="@string/loc_home_msg"
+            android:textColor="@color/home_navigation_white"
+            android:textSize="@dimen/bar_content_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/loc_home_msg_tv"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/loc_home_msg_tv"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#cccccc" />
+    </RelativeLayout>
+
+    <!-- sett -->
+
+    <RelativeLayout
+        android:id="@+id/loc_home_sett"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/loc_home_menu_height"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/bg"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/loc_home_sett_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/loc_home_navigation_sett"
+            android:drawablePadding="@dimen/loc_home_navigation_icon_padding"
+            android:gravity="center"
+            android:text="@string/loc_home_sett"
+            android:textColor="@color/home_navigation_white"
+            android:textSize="@dimen/bar_content_size" />
+    </RelativeLayout>
+
+</LinearLayout>

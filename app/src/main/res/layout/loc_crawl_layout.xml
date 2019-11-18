@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/action_bar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/crawl_mapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <cn.huaxunchina.cloud.location.app.view.ZoomControlView
+                android:id="@+id/crawl_zoomview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/crawl_me_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/loc_me_seletor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/crawl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/crawl_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/poi_city"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/loc_crawl_search_ed"
+                    android:drawableRight="@drawable/loc_crawl_arw"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="@dimen/bar_content_size" />
+
+                <Button
+                    android:id="@+id/poi_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/loc_crawl_search_ed"
+                    android:drawableLeft="@drawable/loc_crawl_search_btn"
+                    android:gravity="center_vertical"
+                    android:hint="请输入地址"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/bar_content_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/crawl_layout"
+            android:layout_below="@+id/crawl_layout"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/crawl_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/loc_crawl_add" />
+
+            <Button
+                android:id="@+id/crawl_det"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/loc_crawl_det" />
+
+            <Button
+                android:id="@+id/crawl_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/loc_crawl_del" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

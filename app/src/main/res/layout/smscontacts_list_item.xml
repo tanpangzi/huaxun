@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/letter_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contacts_catalog"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:text="A"
+                android:textColor="#444444" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#cccccc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contacts_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/contacts_item_bg"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/contacts_head1" />
+
+            <TextView
+                android:id="@+id/contacts_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:textColor="@color/list_title_color"
+                android:textSize="@dimen/bar_title_size" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!--
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+            -->
+
+            <CheckBox
+                android:id="@+id/contacts_check"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/contacts_check"
+                android:button="@null"
+                android:focusable="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dip"
+            android:background="#eeeeee" />
+    </LinearLayout>
+
+</LinearLayout>

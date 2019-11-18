@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="40dip"
+    android:layout_marginRight="40dip"
+    android:background="@drawable/alert_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+         <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:textColor="#333333" />
+        
+        <TextView
+            android:id="@+id/conet"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#333333" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:background="#bebebe" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="0dip"
+            android:layout_height="30dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#0099ff" />
+
+        <View
+            android:layout_width="0.1dip"
+            android:layout_height="fill_parent"
+            android:background="#bebebe" />
+
+        <TextView
+            android:id="@+id/look_up"
+            android:layout_width="0dip"
+            android:layout_height="30dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="呼叫"
+            android:textColor="#0099ff" />
+    </LinearLayout>
+
+</LinearLayout>

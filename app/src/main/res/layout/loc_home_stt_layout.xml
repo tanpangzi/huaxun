@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/actionbar_bg" >
+        <include layout="@layout/loc_action_bar" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/loc_setting_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/activity_bg"
+        android:listSelector="@null"
+        android:dividerHeight="2dp"
+        android:fadingEdge="none"
+        android:scrollbars="none" />
+
+</RelativeLayout>

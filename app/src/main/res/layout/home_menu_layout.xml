@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabs_navigate_container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <!-- news -->
+
+    <RelativeLayout
+        android:id="@+id/home_news"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/home_menu_height"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/bg"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/home_news_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/home_navigation_icon_padding"
+            android:drawableTop="@drawable/home_navigation_news"
+            android:gravity="center"
+            android:text="@string/home_news"
+            android:textColor="@color/home_navigation_white"
+            android:textSize="11.0sp" />
+    </RelativeLayout>
+
+    <!-- location -->
+
+    <RelativeLayout
+        android:id="@+id/home_location"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/home_menu_height"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/bg"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/home_location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/home_navigation_icon_padding"
+            android:drawableTop="@drawable/home_navigation_location"
+            android:gravity="center"
+            android:text="@string/home_location"
+            android:textColor="@color/home_navigation_white"
+            android:textSize="11.0sp" />
+    </RelativeLayout>
+
+    <!-- more -->
+
+    <RelativeLayout
+        android:layout_width="30dip"
+        android:layout_height="69dip"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.0" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/home_menu_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg" />
+
+        <TextView
+            android:id="@+id/home_more"
+            android:layout_width="wrap_content"
+            android:layout_height="150dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableBottom="@drawable/home_navigation_more" />
+    </RelativeLayout>
+
+    <!-- contacts -->
+
+    <RelativeLayout
+        android:id="@+id/home_contacts"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/home_menu_height"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/bg"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/home_contacts_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/home_navigation_icon_padding"
+            android:drawableTop="@drawable/home_navigation_contacts"
+            android:gravity="center"
+            android:text="@string/home_contacts"
+            android:textColor="@color/home_navigation_white"
+            android:textSize="11.0sp" />
+    </RelativeLayout>
+
+    <!-- profile -->
+
+    <RelativeLayout
+        android:id="@+id/home_profile"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/home_menu_height"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/bg"
+        android:clickable="true" >
+
+        <TextView
+            android:id="@+id/home_profile_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/home_navigation_icon_padding"
+            android:drawableTop="@drawable/home_navigation_profile"
+            android:gravity="center"
+            android:text="@string/home_profile"
+            android:textColor="@color/home_navigation_white"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+</LinearLayout>

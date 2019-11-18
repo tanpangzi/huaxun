@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <!-- bar -->
+
+    <include layout="@layout/action_bar_v2" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/feedback_content_ed"
+            android:layout_width="fill_parent"
+            android:layout_height="150dip"
+            android:background="@drawable/ed_bg"
+            android:gravity="left"
+            android:hint="感谢留下宝贵意见，我们将不断改进。"
+            android:padding="5dp"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/bar_content_size" />
+
+        <TextView
+            android:id="@+id/feedback_ed_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/feedback_content_ed"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:maxLength="100" />
+    </RelativeLayout>
+
+</LinearLayout>

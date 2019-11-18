@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/loc_activity_bg"
+    android:orientation="horizontal" >
+
+    <cn.huaxunchina.cloud.location.app.view.BatteryView
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:progress="0" >
+    </cn.huaxunchina.cloud.location.app.view.BatteryView>
+
+    <TextView
+        android:id="@+id/battery_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/progressBar1"
+        android:layout_toRightOf="@+id/progressBar1"
+        android:text="50%"
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
+
+</RelativeLayout>

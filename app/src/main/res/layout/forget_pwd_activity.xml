@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <!-- bar -->
+
+    <include layout="@layout/action_bar_v2" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/forget_account_ed"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:background="@drawable/ed_bg"
+            android:hint="账号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/ed_bg" >
+
+            <EditText
+                android:id="@+id/forget_verifycode_ed"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="验证码"
+                android:maxLength="4"
+                android:paddingLeft="5dip"
+                android:singleLine="true"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/forget_verifycode_btn"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/forget_verifycode_ed"
+                android:layout_alignRight="@+id/forget_verifycode_ed"
+                android:layout_alignTop="@+id/forget_verifycode_ed"
+                android:layout_margin="3dip"
+                android:background="@drawable/btn_selector"
+                android:gravity="center"
+                android:padding="4dip"
+                android:text="@string/forget_verifycode"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/forget_new_password_ed"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/ed_bg"
+            android:hint="新密码(字母数字:8-20)"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/forget_two_password_ed"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/ed_bg"
+            android:hint="确认密码(字母数字:8-20)"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:padding="10dip"
+    android:scrollbars="none"
+    android:id="@+id/attendance_gridview"
+    android:verticalSpacing="10dip"
+    android:horizontalSpacing="10dip"
+    android:numColumns="4"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"/>

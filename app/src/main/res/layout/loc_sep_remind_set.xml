@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loc_activity_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/loc_actionbar_bg" >
+
+        <TextView
+            android:id="@+id/loc_spe_remind_save_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="保存"
+            android:textColor="@color/loc_save_txt_selector"
+            android:textSize="@dimen/bar_txt_size" />
+
+        <cn.huaxunchina.cloud.app.view.MyBackView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+        </cn.huaxunchina.cloud.app.view.MyBackView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/loc_title_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="开关机提醒"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bar_title_size" />
+
+        <TextView
+            android:id="@+id/loc_mess_conent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/loc_title_time"
+            android:layout_below="@+id/loc_title_time"
+            android:layout_toLeftOf="@+id/alarm_setting_ck"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:maxLines="2"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="开/关机提醒功能后，终端卡开机/关机时，亲情号码1将会收到短信提醒"
+            android:textColor="#8e8e93"
+            android:textSize="@dimen/bar_data_size" />
+
+        <CheckBox
+            android:id="@+id/alarm_setting_ck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/loc_title_time"
+            android:layout_alignBottom="@+id/loc_title_time"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/setting_check"
+            android:button="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/loc_title_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="低电量提醒"
+            android:textColor="@color/black"
+            android:textSize="@dimen/bar_title_size" />
+
+        <TextView
+            android:id="@+id/loc_mess_conent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/loc_title_time"
+            android:layout_below="@+id/loc_title_time"
+            android:layout_toLeftOf="@+id/alarm_setting_ck"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:maxLines="2"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="开启“低电提醒”功能后，终端卡电量较低时，亲情号码1将收到短信提醒。"
+            android:textColor="#8e8e93"
+            android:textSize="@dimen/bar_data_size" />
+
+        <CheckBox
+            android:id="@+id/alarm_setting_ck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/loc_title_time"
+            android:layout_alignBottom="@id/loc_title_time"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/setting_check"
+            android:button="@null" />
+    </RelativeLayout>
+
+</LinearLayout>

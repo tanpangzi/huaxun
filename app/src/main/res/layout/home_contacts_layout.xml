@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/action_bar_change" />
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/contacts_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@color/white"
+        android:visibility="gone" >
+    </com.astuetz.PagerSlidingTabStrip>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/contacts_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" />
+
+</LinearLayout>

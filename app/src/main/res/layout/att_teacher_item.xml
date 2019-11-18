@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dip"
+    android:layout_height="100dip"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/attend_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/attendance_studentname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dip"
+            android:text="张三"
+            android:textColor="#666666"
+            android:textSize="@dimen/bar_title_size" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/attendance_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:background="@drawable/att_item_status"
+        android:visibility="invisible" />
+
+</FrameLayout>

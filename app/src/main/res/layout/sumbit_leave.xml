@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/actionbar_bg" >
+
+        <ImageButton
+            android:id="@+id/sumbit_leave_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/send_btn" />
+
+        <cn.huaxunchina.cloud.app.view.MyBackView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+        </cn.huaxunchina.cloud.app.view.MyBackView>
+    </RelativeLayout>
+
+    <cn.huaxunchina.cloud.app.view.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="请假人"
+                    android:textColor="@color/list_title_color"
+                    android:textSize="@dimen/bar_title_size" />
+
+                <TextView
+                    android:id="@+id/leave_person_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center|right"
+                    android:text=""
+                    android:textColor="@color/bar_botoom_text"
+                    android:textSize="@dimen/bar_content_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/leave_type_relative"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/relativeLayout1"
+                android:layout_alignRight="@+id/relativeLayout1"
+                android:layout_below="@+id/relativeLayout1"
+                android:layout_marginTop="4dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="请假类型"
+                    android:textColor="@color/list_title_color"
+                    android:textSize="@dimen/bar_title_size" />
+
+                <ImageButton
+                    android:id="@+id/type_imagebtn"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/item_arrow" />
+
+                <TextView
+                    android:id="@+id/type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/type_imagebtn"
+                    android:gravity="center|right"
+                    android:text="事假"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/bar_content_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sta_date_relative"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/leave_type_relative"
+                android:layout_alignRight="@+id/relativeLayout1"
+                android:layout_below="@+id/leave_type_relative"
+                android:layout_marginTop="4dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="开始日期"
+                    android:textColor="@color/list_title_color"
+                    android:textSize="@dimen/bar_title_size" />
+
+                <ImageButton
+                    android:id="@+id/startime_imagebtn"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/item_arrow" />
+
+                <TextView
+                    android:id="@+id/sta_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/startime_imagebtn"
+                    android:gravity="center"
+                    android:text="开始时间"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/bar_content_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/end_date_relative"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignLeft="@+id/sta_date_relative"
+                android:layout_alignRight="@+id/relativeLayout1"
+                android:layout_below="@+id/sta_date_relative"
+                android:layout_marginTop="4dp"
+                android:background="@color/white" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="结束日期"
+                    android:textColor="@color/list_title_color"
+                    android:textSize="@dimen/bar_title_size" />
+
+                <ImageButton
+                    android:id="@+id/end_time_imagebtn"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/item_arrow" />
+
+                <TextView
+                    android:id="@+id/end_time_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/end_time_imagebtn"
+                    android:gravity="center"
+                    android:text="结束时间"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/bar_content_size" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/leave_edit"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignLeft="@+id/end_date_relative"
+                android:layout_alignRight="@+id/end_date_relative"
+                android:layout_below="@+id/end_date_relative"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/forum_edittext_selector"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="请输入请假原因(限30字)"
+                android:maxLength="30"
+                android:padding="10dp"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/bar_content_size" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/leave_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/leave_edit"
+                android:padding="10dp"
+                android:text="0/30"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/bar_content_size" />
+        </RelativeLayout>
+    </cn.huaxunchina.cloud.app.view.BounceScrollView>
+
+</LinearLayout>

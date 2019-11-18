@@ -1,0 +1,29 @@
+<!--
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bar_height"
+    android:background="@color/loc_actionbar_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    
+             android:layout_width="8dip"
+            android:layout_height="18dip"
+   
+
+    <cn.huaxunchina.cloud.app.view.MyBackView1
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:gravity="center" >
+    </cn.huaxunchina.cloud.app.view.MyBackView1>
+
+</LinearLayout>
+-->
+
+<cn.huaxunchina.cloud.app.view.MyBackView1 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/back"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/actionbar_bg" />

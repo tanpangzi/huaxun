@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bar_height"
+    android:background="@color/actionbar_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <!--
+             android:layout_width="8dip"
+            android:layout_height="18dip"
+    -->
+
+    <cn.huaxunchina.cloud.app.view.MyBackView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+    </cn.huaxunchina.cloud.app.view.MyBackView>
+
+</LinearLayout>

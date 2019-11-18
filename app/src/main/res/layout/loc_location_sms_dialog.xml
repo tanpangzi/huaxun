@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/loc_about_dialog"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定位说明"
+            android:textColor="@color/loc_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:background="#bebebe" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. 若终端离线，则定位不成功。"
+                android:textColor="@color/loc_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. 用户需要承担一条短信费用;"
+                android:textColor="@color/loc_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. 定位需要联网获取终端信息;"
+                android:textColor="@color/loc_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. 网络不佳时，需要一段时间，请耐心等待;"
+                android:textColor="@color/loc_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="说明:" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="此功能用于定位当前终端的实时位置。" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/loc_location_btn1"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_selector"
+                    android:text="确定"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/loc_location_btn2"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/back_pressed"
+                    android:text="取消"
+                    android:textColor="@color/loc_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp" />
+
+</LinearLayout>

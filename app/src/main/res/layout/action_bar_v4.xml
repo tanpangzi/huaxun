@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/bar_height"
+    android:background="@color/loc_actionbar_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/contacts_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/actionbar_title_margin_left"
+        android:gravity="center"
+        android:text="联系人"
+        android:textColor="@color/actionbar_title_color"
+        android:textSize="@dimen/bar_txt_size" />
+
+    <TextView
+        android:id="@+id/sms_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:text="群发"
+        android:textColor="@color/sumbit_txt"
+        android:textSize="@dimen/bar_title_size" />
+
+</RelativeLayout>

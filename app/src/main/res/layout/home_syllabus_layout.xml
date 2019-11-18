@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/action_bar_v3" />
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/syllabus_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@color/white" >
+    </com.astuetz.PagerSlidingTabStrip>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/syllabus_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
+
+</LinearLayout>

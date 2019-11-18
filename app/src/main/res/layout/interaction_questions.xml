@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/today_read_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
+        android:background="@color/actionbar_bg" >
+
+        <TextView
+            android:id="@+id/sumbit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="发布"
+            android:textColor="@color/sumbit_txt"
+            android:textSize="@dimen/bar_txt_size" />
+
+        <cn.huaxunchina.cloud.app.view.MyBackView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+        </cn.huaxunchina.cloud.app.view.MyBackView>
+    </RelativeLayout>
+
+    <cn.huaxunchina.cloud.app.view.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp" >
+
+                <EditText
+                    android:id="@+id/homeschool_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/forum_edittext_selector"
+                    android:hint="请输入互动主题(限20字)"
+                    android:maxLength="20"
+                    android:padding="10dip"
+                    android:scrollbars="vertical"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/bar_content_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignLeft="@+id/relativeLayout3"
+                android:layout_below="@+id/relativeLayout3"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/homeschool_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/forum_edittext_selector"
+                    android:gravity="left|top"
+                    android:hint="请输入互动内容(限150字)"
+                    android:maxLength="150"
+                    android:padding="10dip"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/bar_content_size" />
+
+                <TextView
+                    android:id="@+id/ed_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/homeschool_content"
+                    android:layout_alignRight="@+id/homeschool_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="7dp"
+                    android:text="0/150"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/bar_content_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </cn.huaxunchina.cloud.app.view.BounceScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f8f8f8" >
+
+        <TextView
+            android:id="@+id/teacher_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:hint="你要问谁？"
+            android:textColor="@color/list_title_color"
+            android:textSize="@dimen/bar_content_size" />
+
+        <ImageView
+            android:id="@+id/image_jt"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/enter1"
+            android:scaleType="fitCenter"
+            android:visibility="invisible" />
+
+        <CheckBox
+            android:id="@+id/setting_msg_ck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/image_jt"
+            android:background="@drawable/setting_qustions_check"
+            android:button="@null" />
+    </RelativeLayout>
+
+</LinearLayout>
